@@ -23,20 +23,20 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: '/.js[x]?$/',
+                test: /.js[x]?$/,
                 loader: 'babel-loader',
-                exclude: '/node_modules/',
+                exclude: /node_modules/,
                 query: {
                     presets: ['es2015', 'react'],
                     plugins: ['transform-object-rest-spread'],
                 }
             },
             {
-                test: '/\.css$/',
+                test: /\.css$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
             {
-                test: '/\.woff|.woff2|.ttf|.eot|.svg*.*$/',
+                test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
                 loader: 'file',
             }
         ]
