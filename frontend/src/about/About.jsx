@@ -1,9 +1,14 @@
-import React from "react";
+import React from "react"
+
+import PageHeader from "../template/PageHeader"
 
 const About = (props) => {
     return (
         <div>
-            <h1>Sobre</h1>
+            <PageHeader name="Sobre" small="Nós" />
+
+            <h2>Nossa História</h2>
+            <p>Lorem ipsum dolor sit amet...</p>
         </div>
     )
 }
