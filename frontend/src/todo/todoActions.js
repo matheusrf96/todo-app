@@ -17,6 +17,9 @@ export const search = () => {
 
 export const add = (description) => {
     return dispatch => {
+        if (!description)
+            return dispatch({ type: 'TODO_ADDED', payload: '' })
+
         axios.post(URL, { description })
             .then(resp => dispatch({ type: 'TODO_ADDED', payload: resp.data }))
             .then(resp => dispatch(search()))
